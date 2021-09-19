@@ -32,11 +32,11 @@ def get_attachment(img, filename):
 """
 def send_mail(userid, name, email, filename):
         mail_content = "Hi " + name.title() + """,\n
-        Thank you for participating in LinkedIn Branding Session organized by IEEE MBCET SB.\nPlease find your attached certificate.
+        Thank you for participating.\nPlease find your attached certificate.
         \nAwaiting your active participation in our upcoming events. 
-	\nThanks & Regards,\nKesia Mary Joies \nChair | IEEE MBCET SB	
+	\nThanks & Regards,\n	
 	"""
-        senderAddress = 'kesiajoies@gmail.com'
+        senderAddress = ''
         senderPswd = '******'
         receiverAddress = email
 
@@ -66,7 +66,7 @@ def send_mail(userid, name, email, filename):
 
 def main():
 	# Reads excel sheet with the names and emails of attendees
-	data = pd.read_excel(r'Linkedin Branding (Responses).xlsx')  #File name of the excel sheet
+	data = pd.read_excel(r'Participants.xlsx')  #File name of the excel sheet
 	total = len(data.index)
 
 	for i in range(total):
